@@ -4,42 +4,44 @@ class ServicioDestinoCulinario:
 
     def __init__(self):
         destinos = []
-        with open("Persistencia/Destino.json","r") as file:
+        with open("Persistencia/DestinoCulinarios.json","r") as file:
             destinos_json = json.load(file)
         
         for data in destinos_json:
             destinos.append(DestinoCulinario.from_json(data))
         self.destinos = destinos
     
-    def crearDestinoCulinario(self):
+    def crearDestinoCulinario(self,nombre,tipo_cocina,precio_minimo,
+                precio_maximo,popularidad,disponibilidad,id_ubicacion,
+                imagen,ingredientes = None):
         id = len(self.destinos) + 1 
-        nombre = input("Ingrese el nombre : ")
-        direccion = input("Ingrese la direccion : ")
-        coordenadas = []
-        for i in range(2):
-            coordenadas.append(input("Ingrese la coordenada : "))
-        ubicacion = Ubicacion(id,nombre,direccion,coordenadas)
-        self.ubicaciones.append(ubicacion)
+        destino = DestinoCulinario(id,nombre,tipo_cocina,precio_minimo,
+                precio_maximo,popularidad,disponibilidad,id_ubicacion,
+                imagen,ingredientes)
+        self.destinos.append(destino)
     
-    def eliminarUbicacion(self,ubicacion):
-        self.ubicaciones.remove(ubicacion)
+    def eliminarDestinoCulinario(self,destino):
+        self.destinos.remove(destino)
     
-    def buscarUbicacion(self,id_ubicacion):
-        for ubicacion in self.ubicaciones:
-            if ubicacion.id == id_ubicacion:
-                return ubicacion
+    def buscarDestinoCulinario(self,id_destino):
+        for destino in self.destinos:
+            if destino.id == id_destino:
+                return destino
         return None
     
-    def modificar(self,id_ubicacion):
-        ubicacion = self.buscarUbicacion(id_ubicacion)
-        if not(ubicacion is None):
-            nombre = input("Ingrese el nombre : ")
-            direccion = input("Ingrese la direccion : ")
-            coordenadas = []
-            for i in range(2):
-                coordenadas.append(input("Ingrese la coordenada : "))
-            ubicacion.nombre = nombre
-            ubicacion.direccion = direccion
-            ubicacion.coordenadas = coordenadas
+    def modificar(self,id_destino,nombre,tipo_cocina,precio_minimo,
+                precio_maximo,popularidad,disponibilidad,id_ubicacion,
+                imagen,ingredientes):
+        destino = self.buscarDestinoCulinario(id_destino)
+        if not(destino is None):
+            destino.nombre = nombre
+            destino.tipo_cocina = tipo_cocina
+            destino.precio_minimo = precio_minimo
+            destino.precio_maximo = precio_maximo
+            destino.popularidad = popularidad
+            destino.disponibilidad = disponibilidad
+            destino.id_ubicacion = id_ubicacion
+            destino.imagen = imagen
+            destino.ingredientes = ingredientes
         else:
-            print("que no se encuentra la Ubicacion")
+            print("que no se encuentra Destino Culinario")

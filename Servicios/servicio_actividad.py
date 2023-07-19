@@ -7,40 +7,30 @@ class ServicioActividad:
         with open("Persistencia/Actividad.json","r") as file:
             actividades_json = json.load(file)
             print(actividades_json)
-        w
+        
         for data in actividades_json:
             actividades.append(Actividad.from_json(data))
         self.actividades = actividades
     
-    def crearUbicacion(self):
-        id = len(self.ubicaciones) + 1 
-        nombre = input("Ingrese el nombre : ")
-        direccion = input("Ingrese la direccion : ")
-        coordenadas = []
-        for i in range(2):
-            coordenadas.append(input("Ingrese la coordenada : "))
-        ubicacion = Ubicacion(id,nombre,direccion,coordenadas)
-        self.ubicaciones.append(ubicacion)
+    def crearActividad(self,nombre,id_destino,hora_inicio):
+        id = len(self.actividades) + 1 
+        actividad = Actividad(id,nombre,id_destino,hora_inicio)
+        self.actividades.append(actividad)
     
-    def eliminarUbicacion(self,ubicacion):
-        self.ubicaciones.remove(ubicacion)
+    def eliminarActividad(self,actividad):
+        self.actividades.remove(actividad)
     
-    def buscarUbicacion(self,id_ubicacion):
-        for ubicacion in self.ubicaciones:
-            if ubicacion.id == id_ubicacion:
-                return ubicacion
+    def buscarActividad(self,id_actividad):
+        for actividad in self.actividades:
+            if actividad.id == id_actividad:
+                return actividad
         return None
     
-    def modificar(self,id_ubicacion):
-        ubicacion = self.buscarUbicacion(id_ubicacion)
-        if not(ubicacion is None):
-            nombre = input("Ingrese el nombre : ")
-            direccion = input("Ingrese la direccion : ")
-            coordenadas = []
-            for i in range(2):
-                coordenadas.append(input("Ingrese la coordenada : "))
-            ubicacion.nombre = nombre
-            ubicacion.direccion = direccion
-            ubicacion.coordenadas = coordenadas
+    def modificar(self,id_actividad):
+        actividad = self.buscarActividad(id_actividad)
+        if not(actividad is None):
+            actividad.nombre = nombre
+            actividad.id_destino = id_destino
+            actividad.hora_inicio = hora_inicio
         else:
-            print("que no se encuentra la Ubicacion")
+            print("que no se encuentra la Actividad")
