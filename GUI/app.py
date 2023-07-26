@@ -3,7 +3,8 @@ import tkintermapview
 import customtkinter
 import os
 from PIL import Image,ImageTk
-from guiUbicacion import FrameUbicacion
+from GUI.guiUbicacion import FrameUbicacion
+from GUI.guiDestinos import DestinosFrame
 
 class App(customtkinter.CTk):
     def __init__(self):
@@ -64,9 +65,9 @@ class App(customtkinter.CTk):
         self.home_frame_large_image_label.grid(row=0, column=0, padx=20, pady=10)
 
         # create second frame
-        self.second_frame = FrameUbicacion(self)
+        self.ubicacion_frame = FrameUbicacion(self)
         # create third frame
-        self.third_frame = customtkinter.CTkFrame(self, corner_radius=0, fg_color="transparent")
+        self.third_frame = DestinosFrame(self)
 
         self.frame_map = customtkinter.CTkFrame(self.home_frame,width=900,height=500)
         self.frame_map.grid(row=1,column=0,padx=20,pady=20)
@@ -93,9 +94,9 @@ class App(customtkinter.CTk):
         else:
             self.home_frame.grid_forget()
         if name == "frame_2":
-            self.second_frame.grid(row=0, column=1, sticky="nsew")
+            self.ubicacion_frame.grid(row=0, column=1, sticky="nsew")
         else:
-            self.second_frame.grid_forget()
+            self.ubicacion_frame.grid_forget()
         if name == "frame_3":
             self.third_frame.grid(row=0, column=1, sticky="nsew")
         else:

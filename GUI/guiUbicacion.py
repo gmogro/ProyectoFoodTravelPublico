@@ -25,7 +25,7 @@ class FrameUbicacion(customtkinter.CTkFrame):
         self.filter_boton = customtkinter.CTkButton(self.frame_filter,text="BUSCAR")
         self.filter_boton.grid(row=0,column=1,padx=10,pady=10)
 
-        self.boton_editar = customtkinter.CTkButton(self.frame_filter,text="EDITAR",fg_color="#02b0db",hover_color="#60d3f0")
+        self.boton_editar = customtkinter.CTkButton(self.frame_filter,text="EDITAR",fg_color="#02b0db",hover_color="#60d3f0",command=self.event_editar)
         self.boton_eliminar = customtkinter.CTkButton(self.frame_filter,text="ELIMINAR",fg_color="red",hover_color="#e84351")
         self.boton_ver = customtkinter.CTkButton(self.frame_filter,text="VER",fg_color="green",hover_color="#3bed44")
         self.boton_editar.grid(row=0,column=2,padx=10,pady=10)
@@ -40,3 +40,8 @@ class FrameUbicacion(customtkinter.CTkFrame):
         self.table.column("#3", anchor=tk.CENTER)
         self.table.heading("#3", text="Estado")
         self.table.grid(row=1, column=0,padx=20, pady=20,sticky="nsew")
+    
+    def event_editar(self):
+        top = customtkinter.CTkToplevel(self)
+        top.geometry("900x600")
+        top.title("Soy un level mas")

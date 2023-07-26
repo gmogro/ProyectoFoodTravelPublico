@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "nombre": "New York",
+    "tipo_cocina": "a la parrilla",
+    "precio_minimo": 980.06,
+    "precio_maximo": 34814.68,
+    "popularidad": 0.226,
+    "disponibilidad": "baja",
+    "id_ubicacion": 1,
+    "imagen": "image2.png",
+    "ingredientes": "cilantro"
+  },
+  {
+    "id": 2,
+    "nombre": "New York",
+    "tipo_cocina": "asado",
+    "precio_minimo": 336.81,
+    "precio_maximo": 56392.02,
+    "popularidad": 0.285,
+    "disponibilidad": "alta",
+    "id_ubicacion": 2,
+    "imagen": "image2.png",
+    "ingredientes": "cumin"
+  },
+  {
+    "id": 3,
+    "nombre": "Madrid",
+    "tipo_cocina": "guisado",
+    "precio_minimo": 955.45,
+    "precio_maximo": 65678.09,
+    "popularidad": 0.18,
+    "disponibilidad": "alta",
+    "id_ubicacion": 3,
+    "imagen": "image1.jpg",
+    "ingredientes": "pepper"
+  },
+  {
+    "id": 4,
+    "nombre": "Tokyo",
+    "tipo_cocina": "horneado",
+    "precio_minimo": 635.87,
+    "precio_maximo": 96979.64,
+    "popularidad": 0.876,
+    "disponibilidad": "alta",
+    "id_ubicacion": 4,
+    "imagen": "image1.jpg",
+    "ingredientes": "olive oil"
+  },
+  {
+    "id": 5,
+    "nombre": "Tokyo",
+    "tipo_cocina": "horneado",
+    "precio_minimo": 257.57,
+    "precio_maximo": 68986.51,
+    "popularidad": 0.838,
+    "disponibilidad": "baja",
+    "id_ubicacion": 5,
+    "imagen": "image2.png",
+    "ingredientes": "tomato"
+  },
+  {
+    "id": 6,
+    "nombre": "Rome",
+    "tipo_cocina": "horneado",
+    "precio_minimo": 782.42,
+    "precio_maximo": 86277.04,
+    "popularidad": 0.65,
+    "disponibilidad": "media",
+    "id_ubicacion": 6,
+    "imagen": "image1.jpg",
+    "ingredientes": "pepper"
+  },
+  {
+    "id": 7,
+    "nombre": "Rome",
+    "tipo_cocina": "guisado",
+    "precio_minimo": 589.32,
+    "precio_maximo": 1068.29,
+    "popularidad": 0.779,
+    "disponibilidad": "baja",
+    "id_ubicacion": 7,
+    "imagen": "image2.png",
+    "ingredientes": "cumin"
+  },
+  {
+    "id": 8,
+    "nombre": "New York",
+    "tipo_cocina": "a la parrilla",
+    "precio_minimo": 589.52,
+    "precio_maximo": 79315.29,
+    "popularidad": 0.185,
+    "disponibilidad": "alta",
+    "id_ubicacion": 8,
+    "imagen": "image3.gif",
+    "ingredientes": "tomato"
+  },
+  {
+    "id": 9,
+    "nombre": "Madrid",
+    "tipo_cocina": "horneado",
+    "precio_minimo": 753.92,
+    "precio_maximo": 98989.27,
+    "popularidad": 0.553,
+    "disponibilidad": "baja",
+    "id_ubicacion": 9,
+    "imagen": "image2.png",
+    "ingredientes": "salt"
+  },
+  {
+    "id": 10,
+    "nombre": "Rome",
+    "tipo_cocina": "a la parrilla",
+    "precio_minimo": 11.71,
+    "precio_maximo": 71202.08,
+    "popularidad": 0.191,
+    "disponibilidad": "media",
+    "id_ubicacion": 10,
+    "imagen": "image1.jpg",
+    "ingredientes": "paprika"
+  }
+]

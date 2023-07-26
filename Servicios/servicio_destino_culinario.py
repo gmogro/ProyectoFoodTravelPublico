@@ -1,3 +1,4 @@
+import json
 from Entidades.destino_culinario import DestinoCulinario
 
 class ServicioDestinoCulinario:
@@ -45,3 +46,6 @@ class ServicioDestinoCulinario:
             destino.ingredientes = ingredientes
         else:
             print("que no se encuentra Destino Culinario")
+
+    def get_values(self):
+        return self.destinos
